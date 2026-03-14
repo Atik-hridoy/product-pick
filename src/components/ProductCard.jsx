@@ -16,11 +16,6 @@ export default function ProductCard({ product }) {
         
         <p className="product-description">{product.description}</p>
 
-        <div className="product-rating">
-          <span className="stars">★★★★★</span>
-          <span className="rating-value">{product.rating}/5</span>
-        </div>
-
         <a
           href={product.affiliate_link}
           target="_blank"

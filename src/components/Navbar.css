@@ -1,38 +1,68 @@
 .navbar {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0066cc;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav-links a {
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover {
   color: #0066cc;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .menu-toggle {
@@ -41,6 +71,12 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #0066cc;
 }
 
 @media (max-width: 768px) {
@@ -59,6 +95,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -66,7 +103,11 @@
   }
 
   .nav-links li {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-links a::after {
+    display: none;
   }
 }
