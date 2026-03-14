@@ -33,12 +33,6 @@ export default function About() {
               <li>Regular updates and new recommendations</li>
             </ul>
 
-            <h2>Affiliate Program</h2>
-            <p>
-              Best Product Picks participates in affiliate marketing programs, including the Amazon Associates Program. 
-              When you click on our links and make a purchase, we may earn a commission at no extra cost to you. 
-              This helps us maintain and improve our website.
-            </p>
           </div>
         </div>
       </section>
