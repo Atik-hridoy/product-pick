@@ -70,10 +70,21 @@ button {
   gap: 2.5rem;
 }
 
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .container {
+    padding: 0 15px;
   }
   
   h1 {
@@ -82,6 +93,25 @@ button {
   
   h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
