@@ -108,22 +108,7 @@
   transform-origin: left;
 }
 
-.menu-toggle {
-  display: none;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: white;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-}
+
 
 .menu-toggle:hover {
   transform: scale(1.1);

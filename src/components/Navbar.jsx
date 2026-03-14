@@ -12,10 +12,6 @@ export default function Navbar() {
           Best Product Picks
         </Link>
 
-        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-          ☰
-        </button>
-
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
